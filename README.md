@@ -34,7 +34,6 @@ The 'llama-recipes' repository is a companion to the [Meta Llama](https://github
     - [`recipes/`](#recipes)
     - [`src/`](#src)
   - [Supported Features](#supported-features)
-  - [Contributing](#contributing)
 
 ## Getting Started
 
@@ -162,8 +161,3 @@ The recipes and modules in this repository support the following features:
 | CPU offloading                                 | ✅ |
 | FSDP checkpoint conversion to HF for inference | ✅ |
 | W&B experiment tracker                         | ✅ |
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
