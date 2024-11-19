@@ -22,14 +22,18 @@ This repository contains example scripts and notebooks to get started with the m
     - [`src/`](#src)
   - [Supported Features](#supported-features)
 
+## Configuration Environment
+
+```bash
+$ python -m venv env
+$ source env/bin/activate
+$ pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple/
+$ pip install -e . -i https://mirrors.aliyun.com/pypi/simple/
+```
+
 ## Getting Started
 
 ### Installing
-Llama-recipes provides a pip distribution for easy install and usage in other projects. Alternatively, it can be installed from source.
-
-> [!NOTE]
-> Ensure you use the correct CUDA version (from `nvidia-smi`) when installing the PyTorch wheels. Here we are using 11.8 as `cu118`.
-> H100 GPUs work better with CUDA >12.0
 
 #### Install with pip
 ```
@@ -37,7 +41,7 @@ pip install llama-recipes
 ```
 
 #### Install with optional dependencies
-Llama-recipes offers the installation of optional packages. There are three optional dependency groups.
+Llama-recipes offers the installation of optional packages.
 To run the unit tests we can install the required dependencies with:
 ```
 pip install llama-recipes[tests]
@@ -71,26 +75,6 @@ cd llama-recipes
 pip install -U pip setuptools
 pip install -e .[tests,auditnlg,vllm]
 ```
-
-
-### Getting the Llama models
-You can find Llama models on Hugging Face hub [here](https://huggingface.co/meta-llama), **where models with `hf` in the name are already converted to Hugging Face checkpoints so no further conversion is needed**. The conversion step below is only for original model weights from Meta that are hosted on Hugging Face model hub as well.
-
-#### Model conversion to Hugging Face
-If you have the model checkpoints downloaded from the Meta website, you can convert it to the Hugging Face format with:
-
-```bash
-## Install Hugging Face Transformers from source
-pip freeze | grep transformers ## verify it is version 4.45.0 or higher
-
-git clone git@github.com:huggingface/transformers.git
-cd transformers
-pip install protobuf
-python src/transformers/models/llama/convert_llama_weights_to_hf.py \
-   --input_dir /path/to/downloaded/llama/weights --model_size 3B --output_dir /output/path
-```
-
-
 
 ## Repository Organization
 Most of the code dealing with Llama usage is organized across 2 main folders: `recipes/` and `src/`.
