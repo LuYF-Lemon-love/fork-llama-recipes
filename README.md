@@ -24,13 +24,6 @@ This repository contains example scripts and notebooks to get started with the m
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-#### PyTorch Nightlies
-If you want to use PyTorch nightlies instead of the stable release, go to [this guide](https://pytorch.org/get-started/locally/) to retrieve the right `--extra-index-url URL` parameter for the `pip install` commands on your platform.
-
 ### Installing
 Llama-recipes provides a pip distribution for easy install and usage in other projects. Alternatively, it can be installed from source.
 
