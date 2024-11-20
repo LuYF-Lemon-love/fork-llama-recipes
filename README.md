@@ -8,19 +8,17 @@ This repository contains example scripts and notebooks to get started with the m
 
 - [Llama Recipes: Examples to get started using the Llama models from Meta](#llama-recipes-examples-to-get-started-using-the-llama-models-from-meta)
   - [Table of Contents](#table-of-contents)
+  - [Configuration Environment](#configuration-environment)
   - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-      - [PyTorch Nightlies](#pytorch-nightlies)
     - [Installing](#installing)
       - [Install with pip](#install-with-pip)
       - [Install with optional dependencies](#install-with-optional-dependencies)
       - [Install from source](#install-from-source)
-    - [Getting the Llama models](#getting-the-llama-models)
-      - [Model conversion to Hugging Face](#model-conversion-to-hugging-face)
   - [Repository Organization](#repository-organization)
     - [`recipes/`](#recipes)
     - [`src/`](#src)
   - [Supported Features](#supported-features)
+  - [Resource](#resource)
 
 ## Configuration Environment
 
@@ -125,3 +123,7 @@ The recipes and modules in this repository support the following features:
 | CPU offloading                                 | ✅ |
 | FSDP checkpoint conversion to HF for inference | ✅ |
 | W&B experiment tracker                         | ✅ |
+
+## Resource
+
+1. [an interactive tokenizer tool](https://tiktokenizer.vercel.app/?model=meta-llama%2FMeta-Llama-3-8B)
